@@ -12,7 +12,7 @@ jobs:
       - name: Deploy to Staging Server
         run: |
             echo "${{secrets.AWS_KEYPAIR}}" &> ~/ssh_key
-            ssh -i ~/ssh_key root@172.31.32.47
+            ssh -i ~/ssh_key root@43.205.115.21
             cd bms && git pull
             pnpm install
             pnpm run build
